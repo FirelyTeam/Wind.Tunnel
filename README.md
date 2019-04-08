@@ -7,7 +7,7 @@ This is the first release to gauge the community interest and we'd love to hear 
 
 ## Setup
 
-First, prepare the server under test with sample data:
+First, prepare the server under test with sample data. Either upload all [Synthea bundles](performance-data/) yourself or do:
 
 1. Zip up all of the resource to upload with [atool](https://www.nongnu.org/atool/): `apack upload.zip performance-data/`
 1. Upload zip with [Vonkloader](http://docs.simplifier.net/vonkloader/index.html): `vonkloader -file:upload.zip -collectionHandling:Split -server:http://<my server>`
