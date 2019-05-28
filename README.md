@@ -13,7 +13,7 @@ First, prepare the server under test with sample data. Either upload all [Synthe
 1. Upload zip with [Vonkloader](http://docs.simplifier.net/vonkloader/index.html): `vonkloader -file:upload.zip -collectionHandling:Split -server:http://<my server>`
 
 ### Install Python dependencies
-1. Install Python dependencies using `pip` (if you don't have it, [install first](https://pip.pypa.io/en/stable/installing/)): `pip install influxdb jsonpath_rw statistics psutil pathlib fhirclient`
+1. Install Python dependencies using `pip` (if you don't have it, [install first](https://pip.pypa.io/en/stable/installing/)): `pip install influxdb jsonpath_rw statistics psutil pathlib fhirclient numpy monotonic`
 
 ## Running performance tests
 
@@ -22,7 +22,7 @@ Run `start_performance_test.sh` - parameters supported are:
 * `--backend` (required): backend in use by target host (`mongo`, `postgres`, `memory`, `sqlite`, or `sqlserver`)
 * `--host` (optional): system under test (eg. `http://localhost`)
 * `--influxdb` (required): InfluxDB intake to sends results to (eg. `http://grafana-locust-firely.westeurope.cloudapp.azure.com:9086`)
-* `--duration` (optional): customise how long to run each test for. By default, each test is run for 5mins.
+* `--duration` (optional): customise how long to run each test for. By default, each test is run for 5mins. The format is that of the --run-time option of Locust itself, e.g. like '1h30m'
 
 ```sh
 # example: run performance tests against localhost:4080
