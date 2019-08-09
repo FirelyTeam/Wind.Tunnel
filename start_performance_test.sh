@@ -55,7 +55,7 @@ echo $pid 1>&200
 # Sanity check that we can connect to the server under test
 test_command="curl -sL \
     -w "%{http_code}\\n" \
-    "$host/Patient?_format=json\&_count=1" \
+    "$host/Patient?_format=json&_count=1" \
     -o /dev/null \
     --connect-timeout 20 \
     --max-time 20"
