@@ -15,6 +15,9 @@ First, prepare the server under test with sample data. Either upload all [Synthe
 ### Install Python dependencies
 1. Install Python dependencies using `pip` (if you don't have it, [install first](https://pip.pypa.io/en/stable/installing/)): `pip install influxdb jsonpath_rw statistics psutil pathlib fhirclient numpy monotonic`
 
+### Extra - own private dashboard
+It's also possible to setup your own, private dashboard by hosting your own InfluxDB+Grafana and importing the [dashboard](https://github.com/FirelyTeam/Wind.Tunnel/blob/master/grafana-dashboards/Inspect%20particular%20test%20run.json) used.
+
 ## Running performance tests
 
 Run `start_performance_test.sh` - parameters supported are:
