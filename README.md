@@ -10,7 +10,7 @@ This is the first release to gauge the community interest and we'd love to hear 
 First, prepare the server under test with sample data. Either upload all [Synthea bundles](performance-data/) yourself or do:
 
 1. Zip up all of the resource to upload with [atool](https://www.nongnu.org/atool/): `apack upload.zip performance-data/`
-1. Upload zip with [Vonkloader](http://docs.simplifier.net/vonkloader/index.html): `vonkloader -file:upload.zip -collectionHandling:Split -server:http://<my server>`
+1. Upload zip with [Vonkloader](https://docs.fire.ly/vonkloader/index.html): `vonkloader -file:upload.zip -collectionHandling:Split -server:http://<my server>`
 
 ### Install Python dependencies
 1. Install Python dependencies using `pip` (if you don't have it, [install first](https://pip.pypa.io/en/stable/installing/)): `pip install influxdb jsonpath_rw statistics psutil pathlib fhirclient numpy monotonic`
